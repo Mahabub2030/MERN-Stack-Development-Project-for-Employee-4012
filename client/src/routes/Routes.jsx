@@ -17,6 +17,7 @@ import AddEmployeFormId from "../components/Form/AddEmployeFormId";
 // import TimeSheetForm from "../components/Dashboard/Sidebar/Menu/TimeSheetForm";
 
 import UpdateFrom from "../components/Form/UpdateFrom";
+import TimeSheetForm from "../components/Dashboard/Sidebar/Menu/TimeSheetForm";
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +29,6 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      
     ],
   },
   { path: "/login", element: <Login /> },
@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      
+
       {
         path: "AddEmployeFormId",
         element: (
@@ -58,7 +58,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      
+
       {
         path: "manage-users",
         element: (
@@ -72,6 +72,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <IdValedation />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "TimeSheetForm",
+        element: (
+          <PrivateRoute>
+            <TimeSheetForm/>
           </PrivateRoute>
         ),
       },
@@ -93,8 +101,6 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-     
-      
     ],
   },
 ]);
